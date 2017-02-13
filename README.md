@@ -1,6 +1,6 @@
 # Поздравление подписчиков группы с Днем Рождения
 ## vk api + Javascript SDK
-Находим подписчиков группы, у кого сегодня Днем Рождения и размещаем пост на стену группы.
+Находим подписчиков группы, у кого сегодня День Рождения и размещаем пост на стену группы.
 
 ![Demo](https://iiibird.github.io/vkBirthdayPost/images/logo.png)
 ![Demo](https://iiibird.github.io/vkBirthdayPost/images/res.png)
