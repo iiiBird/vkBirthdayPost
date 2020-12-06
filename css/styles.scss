@@ -1,0 +1,43 @@
+.hidden-btn {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 10px;
+	height: 10px;
+	cursor: pointer;
+}
+
+.well {
+	margin-top: 20px;
+}
+
+.btn-search {
+	margin-top: 20px;
+}
+
+.post-text {
+	margin-top: 20px;
+}
+
+.btn-post {
+	margin-top: 20px;
+}
+
+.github-link {
+    float: right;
+    margin-top: 25px;
+    color: #000;
+    transition: opacity .2s ease-out;
+}
+
+.github-link:hover,
+.github-link:focus {
+	text-decoration: none;
+	opacity: 0.6;
+	color: #000;
+}
+
+.icon-github {
+    display: inline-block;
+    vertical-align: middle;
+}

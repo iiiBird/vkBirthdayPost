@@ -10,63 +10,63 @@ function getBirthdayMember(group_id, members_count, dr_day, dr_mounth, cityName,
 	}
 
 	if ( cityName == "" ) {
-		VK.Api.call("users.search", { 
-			"group_id": group_id, 
-			"birth_day": dr_day, 
+		VK.Api.call("users.search", {
+			"group_id": group_id,
+			"birth_day": dr_day,
 			"birth_month": dr_mounth,
 			"sort": 0,
-			"v": 5.60, 
-			"count": 1000 
-		}, function(data) { 
-			if (data.response) { 
-				DRGroups = data.response.items; 
+			"v": 5.126,
+			"count": 1000
+		}, function(data) {
+			if (data.response) {
+				DRGroups = data.response.items;
 
-				for (var key in DRGroups) { 
+				for (var key in DRGroups) {
 					$('.well').append('@id' + DRGroups[key].id + ' (' + DRGroups[key].first_name +' '+ DRGroups[key].last_name + ')' + '</br>');
-				} 
-			} else { 
-				alert(data.error.error_msg); 
-			} 
+				}
+			} else {
+				alert(data.error.error_msg);
+			}
 		});
 	} else {
-		VK.Api.call("database.getCities", { 
+		VK.Api.call("database.getCities", {
 			"country_id": 1,
 			"q": cityName,
 			"count": 1,
-			"v": 5.60
-		}, function(data) { 
-			if (data.response) { 
-				DRGroups = data.response.items; 
+			"v": 5.126
+		}, function(data) {
+			if (data.response) {
+				DRGroups = data.response.items;
 
-				for (var key in DRGroups) { 
+				for (var key in DRGroups) {
 					cityID = DRGroups[key].id;
 					break;
-				} 
+				}
 			}
-		
 
-			VK.Api.call("users.search", { 
-				"group_id": group_id, 
-				"birth_day": dr_day, 
-				"birth_month": dr_mounth, 
+
+			VK.Api.call("users.search", {
+				"group_id": group_id,
+				"birth_day": dr_day,
+				"birth_month": dr_mounth,
 				"country": 1,
 				"city": cityID,
 				"hometown": cityName,
 				"age_from": age_from,
 				"age_to": age_to,
 				"sort": 0,
-				"v": 5.60, 
-				"count": 1000 
-			}, function(data) { 
-				if (data.response) { 
-					DRGroups = data.response.items; 
+				"v": 5.126,
+				"count": 1000
+			}, function(data) {
+				if (data.response) {
+					DRGroups = data.response.items;
 
-					for (var key in DRGroups) { 
+					for (var key in DRGroups) {
 						$('.well').append('@id' + DRGroups[key].id + ' (' + DRGroups[key].first_name +' '+ DRGroups[key].last_name + ')' + '</br>');
-					} 
-				} else { 
-					alert(data.error.error_msg); 
-				} 
+					}
+				} else {
+					alert(data.error.error_msg);
+				}
 			});
 		});
 	}
@@ -88,6 +88,11 @@ $('.btn-search').on('click', function() {
 	$('.well').html('');
 
 	date = date.split('.');
+
+	if ( group_id.length === 0 ) {
+		alert("Введите id группы");
+		return false;
+	}
 
 	getBirthdayMember(group_id, mem_count, date[0], date[1], cityName, age_from, age_to);
 });
@@ -143,7 +148,7 @@ $(function (){
 	var localAge_from = localStorage.getItem('age_from');
 	var localAge_to = localStorage.getItem('age_to');
 	var localPost_text = localStorage.getItem('post_text');
-	
+
 
 	$('.group_id').val(localGroup_id);
 	$('.city').val(localCityName);
