@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ДР</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-datepicker.min.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -25,20 +25,20 @@
 <body>
 
 	<script type="text/javascript">
-	  window.onload = function () {
-	  	VK.init({apiId: 5810026});
-	  	VK.Widgets.Auth('vk_auth', {authUrl: '/vkBirthdayPost/'});
+	window.onload = function () {
+		VK.init({apiId: 5810026});
+		VK.Widgets.Auth('vk_auth', {authUrl: '/vkBirthdayPost/'});
 
-	  	VK.Auth.getLoginStatus(function(response) {
-	  		if (response.session) {
-	  			/*Пользователь авторизирован*/
-	  			$('#vk_auth').css('display', 'none');
-	  		} else {
-	  			/* Неавторизованный в Open API пользователь */
-	  			console.log('0');
-	  		}
-	  	});
-	  }
+		VK.Auth.getLoginStatus(function(response) {
+			if (response.session) {
+				/*Пользователь авторизирован*/
+				$('#vk_auth').css('display', 'none');
+			} else {
+				/* Неавторизованный в Open API пользователь */
+				console.log('0');
+			}
+		});
+	}
 
 	</script>
 	<div class="hidden-btn"></div>
@@ -50,46 +50,46 @@
 			<span>GitHub</span>
 		</a>
 		<div id="vk_auth"></div>
-			<div class="row">
-				<div class="col-md-3">
-					<span>id Группы</span>
-					<input autocomplete="on" class="group_id form-control" type="text" data-value="61961289" value="">
-				</div>
+		<div class="row">
+			<div class="col-md-3">
+				<span>id Группы</span>
+				<input autocomplete="on" class="group_id form-control" type="text" data-value="61961289" value="">
 			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<span>Дата ДР</span>
-					<input class="date form-control datetimepicker" type="text" value="">
-				</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<span>Дата ДР</span>
+				<input class="date form-control datetimepicker" type="text" value="">
 			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<span>Город пользователя</span>
-					<input autocomplete="on" class="city form-control" type="text" data-value="Оренбург" value="">
-				</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<span>Город пользователя</span>
+				<input autocomplete="on" class="city form-control" type="text" data-value="Оренбург" value="">
 			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<span>Возраст</span>
-					<div class="row">
-						<div class="col-xs-6">
-							<span>от</span>
-							<input autocomplete="on" class="age_from form-control" type="text" value="">
-						</div>
-						<div class="col-xs-6">
-							<span>до</span>
-							<input autocomplete="on" class="age_to form-control" type="text" value="">
-						</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<span>Возраст</span>
+				<div class="row">
+					<div class="col-xs-6">
+						<span>от</span>
+						<input autocomplete="on" class="age_from form-control" type="text" value="">
+					</div>
+					<div class="col-xs-6">
+						<span>до</span>
+						<input autocomplete="on" class="age_to form-control" type="text" value="">
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<button class="btn btn-primary btn-block btn-search">НАЙТИ У КОГО ДР</button>
-				</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<button class="btn btn-primary btn-block btn-search">НАЙТИ У КОГО ДР</button>
 			</div>
+		</div>
 
-<pre class="well"></pre>
+		<pre class="well"></pre>
 
 		<div class="post-text">
 			<span>Текст сообщения:</span>

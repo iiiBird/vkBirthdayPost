@@ -124,6 +124,7 @@ function sendWallPost() {
     VK.api("wall.post", {
         owner_id: '-'+group_id+'',
         message: newMsg,
+		from_group: 1,
         attachments: 'photo-61961289_456239692'
     }, function (data) {});
 }
